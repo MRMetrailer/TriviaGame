@@ -25,7 +25,7 @@ var triviaQuestions = [{
 },{
 	question: "This casino hosted the last show by Abbot & Costello before their eventual break-up.",
 	answerList: ["The Luxor", "The Sahara", "Bugsy's", "Golden Nugget"],
-	answer: 2
+	answer: 1
 },{
 	question: "Which casino on the Las Vegas Strip is home to the largest bronze sculpture in North America?",
 	answerList: ["Caesars Palace", "Venetian", "SLS", "MGM Grand"],
@@ -53,7 +53,7 @@ var messages = {
 	correct: "Correct! You are a true gambler.",
 	incorrect: "Wrong! Back to the drawing board.",
 	endTime: "Out of time!",
-	finished: "Complete! Let's tally up your score."
+	finished: "You're finished! Let's tally up your score."
 }
 
 $('#startBtn').on('click', function(){
@@ -86,7 +86,7 @@ function newQuestion(){
 	
 	//sets up new questions & answerList
 	$('#currentQuestion').html('Question #'+(currentQuestion+1)+'/'+triviaQuestions.length);
-	$('.question').html('<h2>' + triviaQuestions[currentQuestion].question + '</h2>');
+	$('.question').html(triviaQuestions[currentQuestion].question);
 	for(var i = 0; i < 4; i++){
 		var choices = $('<div>');
 		choices.text(triviaQuestions[currentQuestion].answerList[i]);
@@ -105,7 +105,7 @@ function newQuestion(){
 
 function countdown(){
 	seconds = 15;
-	$('#timeLeft').html('<h3>Time Remaining: ' + seconds + '</h3>');
+	$('#timeLeft').html('Time Remaining: ' + seconds);
 	answered = true;
 	//sets timer to go down
 	time = setInterval(showCountdown, 1000);
@@ -113,7 +113,7 @@ function countdown(){
 
 function showCountdown(){
 	seconds--;
-	$('#timeLeft').html('<h3>Time Remaining: ' + seconds + '</h3>');
+	$('#timeLeft').html('Time Remaining: ' + seconds);
 	if(seconds < 1){
 		clearInterval(time);
 		answered = false;

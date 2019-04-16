@@ -1,50 +1,66 @@
-body{
-	background: url('../images/VegasBackground.jpg');
-	font-family: 'Raleway', sans-serif;
+body {
+	background: url('../images/circuit.png');
+}
+
+header {
+	position: relative;
+	text-align: center;
+	color: gold;
+	font-family: Acme;
+	font-size: 64px;
+
+}
+
+text {
+	position: absolute;
+	top: 16px;
+	right: 64px;
+	
+}
+
+.container {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.answerList, .scoreboard {
+	font-family: Acme;
+    font-size: 30px;
+}
+
+.question {
+	font-family: Lora;
+	font-size: 30px;
+}
+
+#message, #currentQuestion {
+	font-family: Acme;
+	font-size: 22px;
+}
+
+#timeLeft, #correctedAnswer {
+	font-family: Lora;
 	font-size: 25px;
 }
 
-header{
-	margin-bottom: 20px;
-}
-
-.btn-primary,.reset{
-	background-color: #313477;
-	color: white;
-	font-family: 'Sigmar One', sans-serif;
-	font-size: 30px;
+.reset {
+	background-color: gold;
+	color: rgb(0, 12, 175);
+	font-family: 'Acme', sans-serif;
+	font-size: 40px;
 	padding: 20px;
-	margin-top: 100px;
-}
-.btn-primary:hover, .reset:hover{
-	background-color: #202364;
-}
-
-.container{
 	margin-top: 50px;
-	text-align: center;
-	height: 100%;
-	width: 700px;
 }
 
-h2, #message, #finalMessage{
-	font-family: Sigmar One;
+.reset:hover {
+	background-color: goldenrod;
 }
 
-.thisChoice:hover{
-	background-color: #202364;
-	color: white;
-	padding: 10px;
+.thisChoice:hover {
+	background-color: gold;
+	color: rgb(0, 12, 175);
 }
 
-#gif{
+#gif {
 	margin: 30px;
-}
-
-@media screen and (max-width:640px){
-	.container{
-		width: 500px;
-		margin-top: 200px;
-		size: 200%;
-	}	
 }
